@@ -1,0 +1,38 @@
+<?xml version = "1.0"?>
+<robot name = "caster_kinova_xacro" xmlns:xacro = "http://www.ros.org/wiki/xacro">
+  <xacro:property name="M_PI" value="3.1415926535897931" />
+
+  <!-- kinova include -->
+  <xacro:include filename="$(find kinova_description)/urdf/j2s6s200.xacro" />
+
+   <!-- realsense include -->
+  <xacro:include filename="$(find kinova_eye_description)/urdf/realsense_d435.urdf.xacro" />
+
+  <!-- base_link -->
+  <link name="base_link" />
+
+  <!-- kinova 6dof arm -->
+  <xacro:j2s6s200 base_parent="base_link"/> 
+
+  <!-- realsense -->
+  <link name="realsense_coupling_link">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://kinova_eye_description/mesh/kinova_realsense_coupling.stl" />
+      </geometry>
+      <material name="">
+        <color rgba="0.20 0.20 0.20 1" />
+      </material>
+    </visual>
+  </link>
+  <joint name="realsense_coupling_joint" type="fixed">
+    <origin xyz="0 0 0.007" rpy="0 0 0" />
+    <parent link="j2s6s200_link_6"/>
+    <child link="realsense_coupling_link"/>
+  </joint>
+
+  <xacro:sensor_d435 parent="realsense_coupling_link" prefix="camera">
+    <origin xyz="0.0875 0 -0.01515" rpy="0 ${M_PI/2} 0"/>
+  </xacro:sensor_d435>
+</robot>

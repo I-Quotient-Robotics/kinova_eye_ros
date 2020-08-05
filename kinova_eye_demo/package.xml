@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>kinova_eye_demo</name>
+  <version>1.1.0</version>
+  <description>The kinova_eye_demo package</description>
+
+  <maintainer email="ye@iquotient-robotics.com">Ye Tian</maintainer>
+
+  <license>MIT</license>
+
+  <url type="website">https://github.com/I-Quotient-Robotics/kinova_eye_ros</url>
+  <url type="repository">https://github.com/I-Quotient-Robotics/kinova_eye_ros</url>
+  <url type="bugtracker">https://github.com/I-Quotient-Robotics/kinova_eye_ros/issues</url>
+
+  <author email="ye@iquotient-robotics.com">Ye Tian</author>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>roslaunch</build_depend>
+
+  <export>
+  </export>
+</package>

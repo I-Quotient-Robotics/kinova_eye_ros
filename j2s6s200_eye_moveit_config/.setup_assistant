@@ -1,0 +1,11 @@
+moveit_setup_assistant_config:
+  URDF:
+    package: kinova_eye_description
+    relative_path: urdf/j2s6s200_eye.urdf.xacro
+    xacro_args: ""
+  SRDF:
+    relative_path: config/caster_kinova_xacro.srdf
+  CONFIG:
+    author_name: Ye Tian
+    author_email: ye.tian@iquotient-robotics.com
+    generated_timestamp: 1596622458

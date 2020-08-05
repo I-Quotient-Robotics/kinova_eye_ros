@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>kinova_eye_description</name>
+  <version>1.1.0</version>
+  <description>The kinova_eye_description package</description>
+
+  <maintainer email="ye@iquotient-robotics.com">Ye Tian</maintainer>
+
+  <license>MIT</license>
+
+  <url type="website">https://github.com/I-Quotient-Robotics/kinova_eye_ros</url>
+  <url type="repository">https://github.com/I-Quotient-Robotics/kinova_eye_ros</url>
+  <url type="bugtracker">https://github.com/I-Quotient-Robotics/kinova_eye_ros/issues</url>
+
+  <author email="ye@iquotient-robotics.com">Ye Tian</author>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>roslaunch</build_depend>
+
+  <depend>urdf</depend>
+  <depend>rviz</depend>
+  <depend>robot_state_publisher</depend>
+  <depend>joint_state_publisher_gui</depend>
+
+  <depend>realsense2_description</depend>
+
+  <export>
+  </export>
+</package>
